@@ -21,6 +21,5 @@ if __name__ == '__main__':
         if status == False:
             print ("ERROR: Failed to get metadata from Redis server!")
         else:
-            #print ("Contents of deserialized object: " + json.dumps(read_wm, indent=2)) 
             read_wm.print_self()
             print_delimiter()

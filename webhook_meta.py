@@ -1,6 +1,5 @@
 import pickle
 import redis_interface as redis_iface
-import json
 
 # Returns WebhookMetadata object containing the target webhook metadata
 def deserialize_webhook_metadata(redis_connection, webhook_id):
