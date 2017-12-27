@@ -1,0 +1,7 @@
+*.swp
+tags
+*.pyc
+*~
+log.txt
+log.json
+
