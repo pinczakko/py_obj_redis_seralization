@@ -1,12 +1,15 @@
 # README
 
-This program demonstrates how serializ/deserialize Python object to/from Redis 
+This program demonstrates how serialize/deserialize Python object to/from Redis 
 
 ## Prerequisites
 
 This program requires:
+
 - Python 2
+
 - Redis
+
 
 ## How to run
 
