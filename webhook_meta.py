@@ -7,6 +7,7 @@ def deserialize_webhook_metadata(redis_connection, webhook_id):
     m_arr = redis_iface.get_objects_by_pattern(redis_connection, p)
     if len(m_arr) > 0:
         m = m_arr[0] # Get only the first match
+        print ("Object with key [" + str(p) + "] is deserialized from Redis")
         print ("Type of returned object is: " + str(type(m)))
         return True, m 
     else:
@@ -22,7 +23,7 @@ class WebhookMetadata:
     def serialize(self, redis_conn):
         key = "test-meta-webhook-" + self.subs_id 
         redis_iface.store_obj(redis_conn, key, self)
-        print ("Object with key [" + str(self.subs_id) + "] stored in Redis")
+        print ("Object with key [" + str(key) + "] stored in Redis")
 
     def print_self(self):
         print("subs_id = " + self.subs_id)
