@@ -21,7 +21,7 @@ class WebhookMetadata:
     
     def serialize(self, redis_conn):
         key = "test-meta-webhook-" + self.subs_id 
-        redis_iface.store_obj(redis_conn, key, pickle.dumps(self))
+        redis_iface.store_obj(redis_conn, key, self)
         print ("Object with key [" + str(self.subs_id) + "] stored in Redis")
 
     def print_self(self):

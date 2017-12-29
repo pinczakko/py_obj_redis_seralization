@@ -17,9 +17,10 @@ if __name__ == '__main__':
         wm = WebhookMetadata("subs_id_aaaa", "user_id_aaaa", "exp_time_aaaa" )
         wm.serialize(redis_conn)
         print_delimiter()
-        status, read_wm =  deserialize_webhook_metadata(redis_conn, "subs_id_aaaa")
-        if status == False:
-            print ("ERROR: Failed to get metadata from Redis server!")
-        else:
-            read_wm.print_self()
-            print_delimiter()
+        print ("WebhookMetadata Object written to Redis")
+        #status, read_wm =  deserialize_webhook_metadata(redis_conn, "subs_id_aaaa")
+        #if status == False:
+        #    print ("ERROR: Failed to get metadata from Redis server!")
+        #else:
+        #    read_wm.print_self()
+        #    print_delimiter()
