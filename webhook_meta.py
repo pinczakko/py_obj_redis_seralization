@@ -19,6 +19,7 @@ class WebhookMetadata:
         self.subs_id = subs_id 
         self.user_id = user_id
         self.expiration_time = expiration_time 
+        self.test_sub_dict = {"test_key" : 0xDEADBEEF }
     
     def serialize(self, redis_conn):
         key = "test-meta-webhook-" + self.subs_id 

@@ -19,5 +19,6 @@ if __name__ == '__main__':
         if status == False:
             print ("ERROR: Failed to get metadata from Redis server!")
         else:
-            read_wm.print_self()
+            #read_wm.print_self()
+            print("Object read from redis = " + json.dumps(read_wm, indent=2))
             print_delimiter()
